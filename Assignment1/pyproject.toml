@@ -5,7 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.117.1",
+    "fastapi[standard]>=0.117.1",
+    "uvicorn[standard]>=0.30.0",
     "pydantic>=2.11.9",
     "spacy>=3.8.7",
+    "en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl",
 ]

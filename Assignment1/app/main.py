@@ -2,7 +2,6 @@ from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
 from app.bigram_model import BigramModel
-import spacy.cli
 import spacy
 
 app = FastAPI()
@@ -19,7 +18,6 @@ corpus = [
 bigram_model = BigramModel(corpus)
 
 # spaCy model
-spacy.cli.download("en_core_web_lg")
 nlp = spacy.load("en_core_web_lg")
 
 class TextGenerationRequest(BaseModel):
